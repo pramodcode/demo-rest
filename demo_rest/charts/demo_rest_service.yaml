@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-rest-svc
+  labels:
+    app: demo-rest-app
+spec:
+  selector:
+    app: demo-rest-app
+  type: NodePort
+  ports:
+  - nodePort: 30500
+    port: 80
+    targetPort: 80
